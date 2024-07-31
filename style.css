@@ -5,11 +5,19 @@
     font-family: 'Open Sans', sans-serif;
     font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    
+
+}
+
+.maxheader {
+    background-color: #003F62;
 }
 
 .header {
     width: 100%;
-    background-color: #003F62;
+
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -112,6 +120,8 @@
 .nav {
     background: #F4F4F4;
     width: 100%;
+    max-width: 1200px;
+    margin: auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -946,7 +956,8 @@
                 font-weight: 600;
                 margin-top: 15px;
             }
-            & button:hover{
+
+            & button:hover {
                 background-color: white;
                 color: #87BCD9;
             }
@@ -1196,12 +1207,12 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 30px;
-        align-items: center;   
-        justify-items: center; 
+        align-items: center;
+        justify-items: center;
         background-color: #fff;
         height: 90px;
         width: 90%;
-        margin:40px auto;
+        margin: 40px auto;
         border-radius: 25px;
 
         .news {
@@ -1224,7 +1235,7 @@
             & input {
                 outline: none;
                 height: 30px;
-                background-color:#EDA415; 
+                background-color: #EDA415;
                 border: none;
                 margin-left: 30px;
                 caret-color: white;
@@ -1234,29 +1245,33 @@
             .eamil::placeholder {
                 color: white;
                 font-size: 13px;
-                
+
             }
-            & img{
+
+            & img {
                 margin-right: 20px;
                 cursor: pointer;
             }
-            
+
         }
-        .call{
+
+        .call {
             display: flex;
             justify-content: center;
             align-items: center;
             gap: 10px;
-            & img{
+
+            & img {
                 width: 35px;
             }
-            & div{
+
+            & div {
                 font-size: 14px;
             }
         }
     }
 
-    .frame2{
+    .frame2 {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         align-items: center;
@@ -1264,50 +1279,56 @@
         margin: 1px auto;
         justify-items: center;
         gap: 10px;
-       
+
         margin-bottom: 20px;
-        .frm1{
-            .logo{
+
+        .frm1 {
+            .logo {
                 margin-bottom: 15px;
-                & img{
+
+                & img {
                     width: 110px;
                     margin-bottom: 10px;
                 }
             }
-            .address{
+
+            .address {
                 width: 140px;
                 font-size: 14px;
                 margin-bottom: 25px;
                 color: #1B5A7D;
             }
-            .link{
+
+            .link {
                 border-top: 1px solid #9D9D9D;
                 padding-top: 15px;
                 display: flex;
                 justify-content: space-between;
-                
-                & img{
+
+                & img {
                     height: 23px;
                 }
             }
 
         }
 
-        .frm2{
-            
-          
-            div{
+        .frm2 {
+
+
+            div {
                 font-size: 18px;
                 text-align: left;
                 font-weight: 600;
                 color: #1B5A7D;
                 margin-bottom: 10px;
             }
-            & ul li{
+
+            & ul li {
                 text-align: left;
                 color: #D9D9D9;
             }
-            & ul li span{
+
+            & ul li span {
                 color: #1B5A7D;
                 font-weight: 450;
             }
@@ -1834,26 +1855,26 @@
         grid-template-rows: 1fr 1fr;
         row-gap: 20px;
         background-color: #E2F4FF;
-    
-    
+
+
         .frame1 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 10px;
-            align-items: center;   
-            justify-items: center; 
+            align-items: center;
+            justify-items: center;
             background-color: #fff;
             height: 70px;
             width: 97%;
-            margin:25px auto;
+            margin: 25px auto;
             border-radius: 25px;
-    
+
             .news {
                 font-size: 15px;
                 font-weight: bold;
                 margin: auto;
             }
-    
+
             .mail {
                 display: flex;
                 justify-content: space-between;
@@ -1863,44 +1884,48 @@
                 height: 35px;
                 width: 240px;
                 border-radius: 20px;
-    
+
                 & input {
                     outline: none;
                     height: 25px;
-                    background-color:#EDA415; 
+                    background-color: #EDA415;
                     border: none;
                     margin-left: 15px;
                     caret-color: white;
                     color: white;
                 }
-    
+
                 .eamil::placeholder {
                     color: white;
                     font-size: 11px;
-                    
+
                 }
-                & img{
+
+                & img {
                     margin-right: 15px;
                     cursor: pointer;
                     height: 20px;
                 }
-                
+
             }
-            .call{
+
+            .call {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 5px;
-                & img{
+
+                & img {
                     width: 25px;
                 }
-                & div{
+
+                & div {
                     font-size: 12px;
                 }
             }
         }
-    
-        .frame2{
+
+        .frame2 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr 1fr;
             align-items: center;
@@ -1909,48 +1934,54 @@
             justify-items: center;
             gap: 0px;
             margin-bottom: 25px;
-            .frm1{
-                .logo{
+
+            .frm1 {
+                .logo {
                     margin-bottom: 15px;
-                    & img{
+
+                    & img {
                         width: 110px;
                         margin-bottom: 10px;
                     }
                 }
-                .address{
+
+                .address {
                     width: 140px;
                     font-size: 14px;
                     margin-bottom: 25px;
                     color: #1B5A7D;
                 }
-                .link{
+
+                .link {
                     border-top: 1px solid #9D9D9D;
                     padding-top: 15px;
                     display: flex;
                     justify-content: space-between;
-                    
-                    & img{
+
+                    & img {
                         height: 21px;
                     }
                 }
-    
+
             }
-    
-            .frm2{
-                
-              
-                div{
+
+            .frm2 {
+
+
+                div {
                     font-size: 15px;
                     text-align: left;
                     font-weight: 600;
                     color: #1B5A7D;
                     margin-bottom: 10px;
                 }
-                & ul li{
+
+                & ul li {
                     text-align: left;
                     color: #D9D9D9;
                 }
-                & ul li span{
+
+                & ul li span {
                     color: #1B5A7D;
                     font-weight: 450;
                 }
@@ -2043,7 +2074,7 @@
 
             font-size: 15px;
             font-weight: 500;
-            position: absolute;
+            position: fixed;
             background-color: #EDA415;
             color: white;
             height: 100vh;
@@ -2394,11 +2425,13 @@
                     & img {
                         height: 230px;
                     }
-                    .sp9{
+
+                    .sp9 {
                         margin-left: -35px;
                     }
                 }
-                #txt1{
+
+                #txt1 {
                     margin-left: -40px;
                 }
 
@@ -2555,28 +2588,29 @@
             }
         }
     }
+
     .fotter {
-        height:480px;
+        height: 480px;
         row-gap: 0px;
-    
+
         .frame1 {
             display: grid;
             grid-template-columns: 1fr 1fr 1fr;
             gap: 0px;
-            align-items: center;   
-            justify-items: center; 
+            align-items: center;
+            justify-items: center;
             background-color: #fff;
             height: 55px;
             width: 97%;
-            margin:25px auto;
+            margin: 25px auto;
             border-radius: 20px;
-    
+
             .news {
                 font-size: 9px;
                 font-weight: bold;
                 margin: auto;
             }
-    
+
             .mail {
                 overflow: hidden;
                 display: flex;
@@ -2587,45 +2621,49 @@
                 height: 25px;
                 width: 160px;
                 border-radius: 15px;
-    
+
                 & input {
                     outline: none;
                     height: 17px;
-                    background-color:#EDA415; 
+                    background-color: #EDA415;
                     border: none;
                     margin-left: 10px;
                     caret-color: white;
                     color: white;
                     font-size: 10px;
                 }
-    
+
                 .eamil::placeholder {
                     color: white;
                     font-size: 10px;
-                    
+
                 }
-                & img{
+
+                & img {
                     margin-right: 10px;
                     cursor: pointer;
                     height: 15px;
                 }
-                
+
             }
-            .call{
+
+            .call {
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 gap: 5px;
-                & img{
+
+                & img {
                     width: 17px;
                 }
-                & div{
+
+                & div {
                     font-size: 8px;
                 }
             }
         }
-    
-        .frame2{
+
+        .frame2 {
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
@@ -2636,48 +2674,54 @@
             justify-items: center;
             gap: 0px;
             margin-bottom: 5px;
-            .frm1{
-                .logo{
+
+            .frm1 {
+                .logo {
                     margin-bottom: 5px;
-                    & img{
+
+                    & img {
                         width: 100px;
                         margin-bottom: 10px;
                     }
                 }
-                .address{
+
+                .address {
                     width: 140px;
                     font-size: 13px;
                     margin-bottom: 25px;
                     color: #1B5A7D;
                 }
-                .link{
+
+                .link {
                     border-top: 1px solid #9D9D9D;
                     padding-top: 15px;
                     display: flex;
                     justify-content: space-between;
-                    
-                    & img{
+
+                    & img {
                         height: 18px;
                     }
                 }
-    
+
             }
-    
-            .frm2{
-                
-              
-                div{
+
+            .frm2 {
+
+
+                div {
                     font-size: 13px;
                     text-align: left;
                     font-weight: 600;
                     color: #1B5A7D;
                     margin-bottom: 10px;
                 }
-                & ul li{
+
+                & ul li {
                     text-align: left;
                     color: #D9D9D9;
                 }
-                & ul li span{
+
+                & ul li span {
                     color: #1B5A7D;
                     font-size: 13px;
                     font-weight: 450;
