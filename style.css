@@ -9,14 +9,12 @@
 
 }
 
-.maxheader {
-    background-color: #003F62;
-}
+
 
 .header {
     width: 100%;
-
-    max-width: 1200px;
+    background-color: #003F62;
+    /* max-width: 1200px; */
     margin: auto;
     display: flex;
     justify-content: space-between;
@@ -120,7 +118,7 @@
 .nav {
     background: #F4F4F4;
     width: 100%;
-    max-width: 1200px;
+    /* max-width: 1200px; */
     margin: auto;
     display: flex;
     justify-content: space-between;
