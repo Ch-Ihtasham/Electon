@@ -170,16 +170,16 @@ const Go_Next = () => {
 // review slider  
 
 const review = document.querySelectorAll(".rectangle8")
-let r_dot=document.querySelectorAll(".Rpoint")
-let rdot=r_dot[0];
-rdot.style.backgroundColor="#EDA415"
-r_dot.forEach((Rpoint,index)=>{
-    Rpoint.addEventListener('click',()=>{
-        if(rdot){
-        rdot.style.backgroundColor=''
+let r_dot = document.querySelectorAll(".Rpoint")
+let rdot = r_dot[0];
+rdot.style.backgroundColor = "#EDA415"
+r_dot.forEach((Rpoint, index) => {
+    Rpoint.addEventListener('click', () => {
+        if (rdot) {
+            rdot.style.backgroundColor = ''
         }
-        Rpoint.style.backgroundColor="#EDA415";
-        rdot=Rpoint;
+        Rpoint.style.backgroundColor = "#EDA415";
+        rdot = Rpoint;
     })
 
 })
@@ -187,16 +187,57 @@ review.forEach((rectangle8, index) => {
 
     rectangle8.style.left = `${index * 100}%`
 })
-const prev=()=>{
-    review.forEach((rectangle8)=>{
-        rectangle8.style.transform=`translateX(0%)`
+const prev = () => {
+    review.forEach((rectangle8) => {
+        rectangle8.style.transform = `translateX(0%)`
     })
 }
-const next=((rectangle8)=>{
-    review.forEach((rectangle8)=>{
-        rectangle8.style.transform=`translateX(-100%)`
+const next = ((rectangle8) => {
+    review.forEach((rectangle8) => {
+        rectangle8.style.transform = `translateX(-100%)`
     })
 })
+let cart = localStorage.getItem('data')
+let frame = document.querySelectorAll('.frame1')
+let img = document.querySelectorAll('.img')
+console.log(frame)
+frame.forEach((e, i) => {
+    e.addEventListener('click', () => {
+
+    })
+})
+// console.log(cart.json.parse())
+
+//     var newItem = document.createElement('div');
+//     newItem.innerHTML = `
+//     <div class="items" >
+//     <div class="product">
+//         <div><img src="./Assets/speaker1.png" alt=""></div>
+//         <div>
+//             <div class="name">Speaker</div>
+//             <div class="color">
+//                 <span>Color:</span>
+//                 <span>Black</span>
+//             </div>
+//         </div>
+//     </div>
+//     <div class="price">$1100</div>
+//     <div class="inc">
+//         <span>-</span>
+//         <span>1</span>
+//         <span>+</span>
+//     </div>
+//     <div class="price">
+//         $1100
+//     </div>
+//     <div>
+//         <img src="./Assets/close-circle.png" alt="" srcset="" class="cross">
+//     </div>
+
+// </div>
+//     `;
+//     cartItemContainer.appendChild(newItem);
+
 
 
 
