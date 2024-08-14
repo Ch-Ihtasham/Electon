@@ -37,33 +37,50 @@ check.addEventListener('click', () => {
     alert("Order Placed")
 })
 
+let carItem = document.querySelector('#cartItem')
 
 
-
-let decrement = document.querySelectorAll('.decrement')
-let increment = document.querySelectorAll('.increment')
-let count = document.querySelectorAll('.count')
-let price = document.querySelectorAll('.rs')
-let total = document.querySelectorAll('.total')
-increment.forEach((value, index) => {
-    value.addEventListener('click', () => {
-        let currentNumber = parseInt(count[index].innerHTML)
-        currentNumber++
-        count[index].innerHTML = currentNumber
-        total[index].innerHTML = currentNumber * parseInt(price[index].innerHTML)
-
-
-    })
-})
-decrement.forEach((value, index) => {
-    value.addEventListener('click', () => {
-        if (parseInt(count[index].innerHTML) > 0) {
+function events() {
+    let decrement = document.querySelectorAll('.decrement')
+    let increment = document.querySelectorAll('.increment')
+    let count = document.querySelectorAll('.count')
+    let price = document.querySelectorAll('.rs')
+    let total = document.querySelectorAll('.total')
+    increment.forEach((value, index) => {
+        value.addEventListener('click', () => {
             let currentNumber = parseInt(count[index].innerHTML)
-            currentNumber--
+            currentNumber++
             count[index].innerHTML = currentNumber
             total[index].innerHTML = currentNumber * parseInt(price[index].innerHTML)
+            saveData()
 
-        }
+        })
 
     })
-})
+    decrement.forEach((value, index) => {
+        value.addEventListener('click', () => {
+            if (parseInt(count[index].innerHTML) > 0) {
+                let currentNumber = parseInt(count[index].innerHTML)
+                currentNumber--
+                count[index].innerHTML = currentNumber
+                total[index].innerHTML = currentNumber * parseInt(price[index].innerHTML)
+                saveData()
+            }
+
+        })
+
+    })
+}
+function saveData() {
+    localStorage.setItem("data", carItem.innerHTML)
+    // console.log("Data saved:", carItem.innerHTML); 
+}
+async function showTask() {
+    // carItem.innerHTML = localStorage.getItem('data')
+    // console.log(carItem.innerHTML = localStorage.getItem('data'))
+    // console.log(localStorage.getItem('data'))
+    carItem.innerHTML = localStorage.getItem('data')
+    events()
+
+}
+showTask()
