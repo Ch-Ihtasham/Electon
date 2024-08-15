@@ -197,9 +197,16 @@ const next = ((rectangle8) => {
         rectangle8.style.transform = `translateX(-100%)`
     })
 })
-let cart = localStorage.getItem('data')
+
+
+
+
+
+
+
+// let cart = localStorage.getItem('data')
 let frame = document.querySelectorAll('.frame1')
-let img = document.querySelectorAll('.img')
+// let img = document.querySelectorAll('.img')
 console.log(frame)
 frame.forEach((e, i) => {
     e.addEventListener('click', () => {
