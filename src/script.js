@@ -202,7 +202,7 @@ const next = ((rectangle8) => {
 
 
 
-
+// cart section starts from here 
 
 // let cart = localStorage.getItem('data')
 let frame = document.querySelectorAll('.frame1')
