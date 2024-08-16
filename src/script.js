@@ -208,11 +208,11 @@ const next = ((rectangle8) => {
 let frame = document.querySelectorAll('.frame1')
 // let img = document.querySelectorAll('.img')
 console.log(frame)
-frame.forEach((e, i) => {
-    e.addEventListener('click', () => {
+// frame.forEach((e, i) => {
+//     e.addEventListener('click', () => {
 
-    })
-})
+//     })
+// })
 // console.log(cart.json.parse())
 
 //     var newItem = document.createElement('div');
