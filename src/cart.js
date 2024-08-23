@@ -83,6 +83,7 @@ async function showTask() {
     events()
 
 }
+events()
 // showTask()
 
 
