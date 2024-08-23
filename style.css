@@ -1986,6 +1986,10 @@
             }
         }
     }
+    .cart{
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 
@@ -1994,6 +1998,7 @@
 @media(max-width:670px) {
 
 
+   
     .header {
         height: 55px;
         display: flex;
