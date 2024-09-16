@@ -201,50 +201,154 @@ const next = ((rectangle8) => {
 
 
 
+// product through js 
+const productData1 = [
+    {
+        img: './Assets/camera3.png',
+        name: ' Canon Camera',
+        price: ' $11,70'
+    },
+    {
+        img: './Assets/headphone1.png',
+        name: 'Wireless Headphone',
+        price: ' $11,70'
+    },
+    {
+        img: '../Assets/camera4.webp',
+        name: ' Camera',
+        price: ' $11,70'
+    },
+    {
+        img: './Assets/headphone1.png',
+        name: 'Wireless Headphone',
+        price: ' $11,70'
+    },
+    {
+        img: './Assets/controller1.jpg',
+        name: 'Controller',
+        price: ' $11,70'
+    },
+    {
+        img: './Assets/hp3.webp',
+        name: 'Wireless Headphone',
+        price: ' $11,70'
+    },
+    {
+        img: './Assets/lp2.png',
+        name: 'Hp Laptop',
+        price: ' $11,70'
+    },
+    {
+        img: './Assets/controller3.jpg',
+        name: 'Controller',
+        price: '$11,70'
+    },
 
-// cart section starts from here 
+]
+let abc = document.getElementById('abc')
+abc.innerHTML = productData1.map((v) => {
+    return `<div class="frame1">
+                    <div class="img">
+                        <img src="./Assets/controller1.jpg">
+                        <div class="heart"><i class="fa-regular fa-heart"></i></div>
+                    </div>
+                    <div class="name">
+                        ${v.name}
+                    </div>
+                    <div class="price">
+                        $11,70 
+                    </div>
+                    <div>
+                        <i class="fa-solid fa-star" style="color: #eda415;"></i>
+                        <i class="fa-solid fa-star" style="color: #eda415;"></i>
+                        <i class="fa-solid fa-star" style="color: #eda415;"></i>
+                        <i class="fa-solid fa-star" style="color: #eda415;"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                    <div class="c-button">
+                        <button>Add to cart
+                            <img src="./Assets/cart pic.png" alt="" srcset="">
+                        </button>
+                    </div>
+            </div>`;
+}).join("")
 
-// let cart = localStorage.getItem('data')
-let frame = document.querySelectorAll('.frame1')
-// let img = document.querySelectorAll('.img')
-// console.log(frame)
-// frame.forEach((e, i) => {
-//     e.addEventListener('click', () => {
+// product section no two 
 
-//     })
-// })
-// console.log(cart.json.parse())
+const productData2 = [
+    {
+        img: './Assets/camera3.png',
+        name: ' Canon Camera',
+        price: ' $11,70'
+    },
+    {
+        img: './Assets/headphone1.png',
+        name: 'Wireless Headphone',
+        price: ' $11,70'
+    },
+    {
+        img: '../Assets/camera4.webp',
+        name: ' Camera',
+        price: ' $11,70'
+    },
+    {
+        img: './Assets/headphone1.png',
+        name: 'Wireless Headphone',
+        price: ' $11,70'
+    },
+    {
+        img: './Assets/controller1.jpg',
+        name: 'Controller',
+        price: ' $11,70'
+    },
+    {
+        img: './Assets/hp3.webp',
+        name: 'Wireless Headphone',
+        price: ' $11,70'
+    },
+    {
+        img: './Assets/lp2.png',
+        name: 'Hp Laptop',
+        price: ' $11,70'
+    },
+    {
+        img: './Assets/controller3.jpg',
+        name: 'Controller',
+        price: '$11,70'
+    },
+]
+let def = document.getElementById('def')
+def.innerHTML = productData2.map((x) => {
+    return `
+            <div class="frame1">
+                <div class="img">
+                    <img src="${x.img}">
+                    <div class="heart"><i class="fa-regular fa-heart"></i></div>
+                </div>
+                <div class="name">
+                    ${x.name}
+                </div>
+                <div class="price">
+                    ${x.price}
+                </div>
+                <div>
+                    <i class="fa-solid fa-star" style="color: #eda415;"></i>
+                    <i class="fa-solid fa-star" style="color: #eda415;"></i>
+                    <i class="fa-solid fa-star" style="color: #eda415;"></i>
+                    <i class="fa-solid fa-star" style="color: #eda415;"></i>
+                    <i class="fa-solid fa-star-half-stroke" style="color: #eda415;"></i>
+                </div>
+                <div class="c-button">
+                    <button>Add to cart
+                        <img src="./Assets/cart pic.png" alt="" srcset="">
+                    </button>
+                </div>
+            </div>`
+}).join(" ")
 
 
-//     var newItem = document.createElement('div');
-//     newItem.innerHTML = `
-//     <div class="items" >
-//     <div class="product">
-//         <div><img src="./Assets/speaker1.png" alt=""></div>
-//         <div>
-//             <div class="name">Speaker</div>
-//             <div class="color">
-//                 <span>Color:</span>
-//                 <span>Black</span>
-//             </div>
-//         </div>
-//     </div>
-//     <div class="price">$1100</div>
-//     <div class="inc">
-//         <span>-</span>
-//         <span>1</span>
-//         <span>+</span>
-//     </div>
-//     <div class="price">
-//         $1100
-//     </div>
-//     <div>
-//         <img src="./Assets/close-circle.png" alt="" srcset="" class="cross">
-//     </div>
 
-// </div>
-//     `;
-//     cartItemContainer.appendChild(newItem);
+
 
 
 
