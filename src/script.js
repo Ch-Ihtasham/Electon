@@ -266,7 +266,7 @@ abc.innerHTML = productData1.map((v) => {
                         <i class="fa-regular fa-star"></i>
                     </div>
                     <div class="c-button">
-                        <button>Add to cart
+                        <button >Add to cart
                             <img src="./Assets/cart pic.png" alt="" srcset="">
                         </button>
                     </div>
@@ -339,7 +339,7 @@ def.innerHTML = productData2.map((x) => {
                     <i class="fa-solid fa-star-half-stroke" style="color: #eda415;"></i>
                 </div>
                 <div class="c-button">
-                    <button>Add to cart
+                    <button onclick="cart()">Add to cart
                         <img src="./Assets/cart pic.png" alt="" srcset="">
                     </button>
                 </div>
@@ -351,6 +351,55 @@ function viewProduct(name, imageUrl) {
     localStorage.setItem('productImage', imageUrl);
     window.location.href = 'product.html';
 }
+
+function cart() {
+    let existingData = localStorage.getItem('data');
+    console.log(existingData)
+    let items = existingData ? existingData : '';
+    let newItem =
+        `<div class="items">
+                    <div class="product">
+                        <div><img src="./Assets/sp2.webp" alt=""></div>
+                        <div>
+                            <div class="name">Speaker2</div>
+                            <div class="color">
+                                <span>Color:</span>
+                                <span>Black</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="price rs" id="pkr">11000</div>
+                    <div class="inc">
+                        <span class="decrement">-</span>
+                        <span id="one" class="count">1</span>
+                        <span class="increment">+</span>
+                    </div>
+                    <div class="price total" id="bill">
+                        11000
+                    </div>
+                    <div>
+                        <img src="./Assets/close-circle.png" alt="" srcset="" class="cross">
+                    </div>
+
+        </div>`
+    items += newItem;
+    localStorage.setItem('data', items);
+    // let bd = localStorage.getItem('data')
+    // existingData.innerHTML = bd 
+    // let cart2 = localStorage.getItem('carItem')
+    // cart2.innerHTML = bd
+
+
+}
+
+
+
+
+
+
+
+
+
 
 
 
