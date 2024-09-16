@@ -247,7 +247,7 @@ const productData1 = [
 ]
 let abc = document.getElementById('abc')
 abc.innerHTML = productData1.map((v) => {
-    return `<div class="frame1">
+    return `<div class="frame1" onclick="viewProduct('${v.name}', '${v.img}')">
                     <div class="img">
                         <img src="${v.img}">
                         <div class="heart"><i class="fa-regular fa-heart"></i></div>
@@ -345,6 +345,12 @@ def.innerHTML = productData2.map((x) => {
                 </div>
             </div>`
 }).join(" ")
+
+function viewProduct(name, imageUrl) {
+    localStorage.setItem('productName', name);
+    localStorage.setItem('productImage', imageUrl);
+    window.location.href = 'product.html';
+}
 
 
 

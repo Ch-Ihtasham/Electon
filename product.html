@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Detail</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .product-detail {
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        .product-detail img {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="product-detail">
+        <h2 id="product-name">Loading...</h2>
+        <img id="product-image" src="" alt="Product Image">
+    </div>
+
+    <script>
+        // Retrieve product data from localStorage
+        const productName = localStorage.getItem('productName');
+        const productImage = localStorage.getItem('productImage');
+
+        // Display product details on the page
+        document.getElementById('product-name').textContent = productName;
+        document.getElementById('product-image').src = productImage;
+
+        // Clear localStorage (optional if you don't need the data anymore)
+        localStorage.removeItem('productName');
+        localStorage.removeItem('productImage');
+    </script>
+
+</body>
+
+</html>
