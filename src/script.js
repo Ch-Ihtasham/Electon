@@ -249,7 +249,7 @@ let abc = document.getElementById('abc')
 abc.innerHTML = productData1.map((v) => {
     return `<div class="frame1">
                     <div class="img">
-                        <img src="./Assets/controller1.jpg">
+                        <img src="${v.img}">
                         <div class="heart"><i class="fa-regular fa-heart"></i></div>
                     </div>
                     <div class="name">
