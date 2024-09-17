@@ -266,7 +266,7 @@ abc.innerHTML = productData1.map((v) => {
                         <i class="fa-regular fa-star"></i>
                     </div>
                     <div class="c-button">
-                        <button onclick="cart()">Add to cart
+                        <button onclick="cart('${v.name}','${v.img}')">Add to cart
                             <img src="./Assets/cart pic.png" alt="" srcset="">
                         </button>
                     </div>
@@ -339,12 +339,46 @@ def.innerHTML = productData2.map((x) => {
                     <i class="fa-solid fa-star-half-stroke" style="color: #eda415;"></i>
                 </div>
                 <div class="c-button">
-                    <button onclick="cart()">Add to cart
+                    <button onclick="cart('${x.name}','${x.img}')">Add to cart
                         <img src="./Assets/cart pic.png" alt="" srcset="">
                     </button>
                 </div>
             </div>`
 }).join(" ")
+
+
+// product section no 3 
+
+let ghi = document.getElementById('ghi')
+ghi.innerHTML = productData2.map((x) => {
+    return `
+            <div class="frame1">
+                <div class="img">
+                    <img src="${x.img}">
+                    <div class="heart"><i class="fa-regular fa-heart"></i></div>
+                </div>
+                <div class="name">
+                    ${x.name}
+                </div>
+                <div class="price">
+                    ${x.price}
+                </div>
+                <div>
+                    <i class="fa-solid fa-star" style="color: #eda415;"></i>
+                    <i class="fa-solid fa-star" style="color: #eda415;"></i>
+                    <i class="fa-solid fa-star" style="color: #eda415;"></i>
+                    <i class="fa-solid fa-star" style="color: #eda415;"></i>
+                    <i class="fa-solid fa-star-half-stroke" style="color: #eda415;"></i>
+                </div>
+                <div class="c-button">
+                    <button onclick="cart('${x.name}','${x.img}')">Add to cart
+                        <img src="./Assets/cart pic.png" alt="" srcset="">
+                    </button>
+                </div>
+            </div>`
+}).join(" ")
+
+
 
 function viewProduct(name, imageUrl) {
     localStorage.setItem('productName', name);
@@ -352,16 +386,15 @@ function viewProduct(name, imageUrl) {
     window.location.href = 'product.html';
 }
 
-function cart() {
+function cart(name, pic) {
     let existingData = localStorage.getItem('data');
-    console.log(existingData)
     let items = existingData ? existingData : '';
     let newItem =
         `<div class="items">
                     <div class="product">
-                        <div><img src="./Assets/sp2.webp" alt=""></div>
+                        <div><img src="${pic}" alt=""></div>
                         <div>
-                            <div class="name">Speaker2</div>
+                            <div class="name">${name}</div>
                             <div class="color">
                                 <span>Color:</span>
                                 <span>Black</span>
