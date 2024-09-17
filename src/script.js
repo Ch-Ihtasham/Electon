@@ -384,12 +384,6 @@ function cart() {
         </div>`
     items += newItem;
     localStorage.setItem('data', items);
-    // let bd = localStorage.getItem('data')
-    // existingData.innerHTML = bd 
-    // let cart2 = localStorage.getItem('carItem')
-    // cart2.innerHTML = bd
-
-
 }
 
 
