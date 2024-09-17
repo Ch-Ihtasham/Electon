@@ -266,7 +266,7 @@ abc.innerHTML = productData1.map((v) => {
                         <i class="fa-regular fa-star"></i>
                     </div>
                     <div class="c-button">
-                        <button >Add to cart
+                        <button onclick="cart()">Add to cart
                             <img src="./Assets/cart pic.png" alt="" srcset="">
                         </button>
                     </div>
@@ -384,6 +384,7 @@ function cart() {
         </div>`
     items += newItem;
     localStorage.setItem('data', items);
+    event.stopPropagation()
 }
 
 
