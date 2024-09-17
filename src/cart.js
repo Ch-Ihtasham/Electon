@@ -48,6 +48,15 @@ async function showTask() {
 }
 events()
 showTask()
+let bill = document.querySelectorAll('.billing')
+let total = 0;
+bill.forEach((c, i) => {
+    total += parseInt(c.innerText)
+
+})
+console.log(total)
+let subTotal = document.getElementById('subTotal')
+subTotal.innerText = total
 
 
 

@@ -386,7 +386,18 @@ function viewProduct(name, imageUrl) {
     window.location.href = 'product.html';
 }
 
+
+let counter = document.getElementById('counter')
+let storedNumber = localStorage.getItem('number');
+if (storedNumber !== null) {
+    counter.innerText = storedNumber;
+} else {
+    counter.innerText = 0;
+}
+
+
 function cart(name, pic) {
+
     let existingData = localStorage.getItem('data');
     let items = existingData ? existingData : '';
     let newItem =
@@ -407,7 +418,7 @@ function cart(name, pic) {
                         <span id="one" class="count">1</span>
                         <span class="increment">+</span>
                     </div>
-                    <div class="price total" id="bill">
+                    <div class="price total billing" id="bill">
                         11000
                     </div>
                     <div>
@@ -417,8 +428,22 @@ function cart(name, pic) {
         </div>`
     items += newItem;
     localStorage.setItem('data', items);
+
+    let numbring = (localStorage.getItem('number')) || 0
+    numbring++;
+    localStorage.setItem('number', numbring)
+    let storedNumber = localStorage.getItem('number');
+    if (storedNumber !== null) {
+        counter.innerText = storedNumber;
+    } else {
+        counter.innerText = 0;
+    }
+
+
     event.stopPropagation()
 }
+
+
 
 
 
