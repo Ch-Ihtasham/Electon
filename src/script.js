@@ -247,7 +247,7 @@ const productData1 = [
 ]
 let abc = document.getElementById('abc')
 abc.innerHTML = productData1.map((v) => {
-    return `<div class="frame1" onclick="viewProduct('${v.name}', '${v.img}')">
+    return `<div class="frame1" onclick="viewProduct('${v.name}', '${v.img}','${v.price}')">
                     <div class="img">
                         <img src="${v.img}">
                         <div class="heart"><i class="fa-regular fa-heart"></i></div>
@@ -320,7 +320,7 @@ const productData2 = [
 let def = document.getElementById('def')
 def.innerHTML = productData2.map((x) => {
     return `
-            <div class="frame1">
+            <div class="frame1" onclick="viewProduct('${x.name}', '${x.img}','${x.price}')">
                 <div class="img">
                     <img src="${x.img}">
                     <div class="heart"><i class="fa-regular fa-heart"></i></div>
@@ -352,7 +352,7 @@ def.innerHTML = productData2.map((x) => {
 let ghi = document.getElementById('ghi')
 ghi.innerHTML = productData2.map((x) => {
     return `
-            <div class="frame1">
+            <div class="frame1" onclick="viewProduct('${x.name}', '${x.img}','${x.price}')">
                 <div class="img">
                     <img src="${x.img}">
                     <div class="heart"><i class="fa-regular fa-heart"></i></div>
@@ -380,9 +380,10 @@ ghi.innerHTML = productData2.map((x) => {
 
 
 
-function viewProduct(name, imageUrl) {
+function viewProduct(name, imageUrl, price) {
     localStorage.setItem('productName', name);
     localStorage.setItem('productImage', imageUrl);
+    localStorage.setItem('productPrice', price);
     window.location.href = 'product.html';
 }
 
