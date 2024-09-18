@@ -48,18 +48,21 @@ async function showTask() {
 }
 events()
 showTask()
+
+// total amount section 
+
 let bill = document.querySelectorAll('.billing')
 let total = 0;
 bill.forEach((c, i) => {
     total += parseInt(c.innerText)
 
 })
-console.log(total)
+
 let subTotal = document.getElementById('subTotal')
 subTotal.innerText = total
 
 let counterTwo = document.getElementById('counterTwo')
-counterTwo.innerText = localStorage.getItem('number')
+counterTwo.innerText = (localStorage.getItem('number')) || 0
 
 // remove product function 
 
@@ -77,6 +80,17 @@ removeButtons.forEach(function (button) {
             itemsElement.remove();
         }
         saveData()
+
+        // cart number decrement code 
+
+        let countProduct = parseInt(localStorage.getItem('number'))
+        if (countProduct > 0) {
+            countProduct--
+        }
+        localStorage.setItem('number', countProduct)
+        counterTwo.innerText = localStorage.getItem('number')
+        console.log(countProduct)
+
     });
 });
 
