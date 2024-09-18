@@ -58,7 +58,8 @@ console.log(total)
 let subTotal = document.getElementById('subTotal')
 subTotal.innerText = total
 
-
+let counterTwo = document.getElementById('counterTwo')
+counterTwo.innerText = localStorage.getItem('number')
 
 
 
