@@ -380,12 +380,13 @@ ghi.innerHTML = productData2.map((x) => {
 
 
 
-function viewProduct(name, imageUrl, price) {
+function viewProduct(name, imageUrl, productprice) {
     localStorage.setItem('productName', name);
     localStorage.setItem('productImage', imageUrl);
-    localStorage.setItem('productPrice', price);
+    localStorage.setItem('productPrice', productprice);
     window.location.href = 'product.html';
 }
+
 
 
 let counter = document.getElementById('counter')
