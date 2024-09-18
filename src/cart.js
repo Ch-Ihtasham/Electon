@@ -62,19 +62,25 @@ let counterTwo = document.getElementById('counterTwo')
 counterTwo.innerText = localStorage.getItem('number')
 
 // remove product function 
-let removeBtn = document.querySelectorAll('removeProduct');
-// console.log(removeBtn)
-// removeBtn.addEventListener('click', () => {
-//     alert('suppose item is removed')
-// })
-const storedItems = localStorage.getItem('data');
+
+const removeButtons = document.querySelectorAll('.cross');
+
+// Loop through each remove button
+removeButtons.forEach(function (button) {
+    // Add a click event listener to each button
+    button.addEventListener('click', function () {
+        // Get the closest parent element with the class 'items'
+        const itemsElement = this.closest('.items');
+
+        // Remove the 'items' element
+        if (itemsElement) {
+            itemsElement.remove();
+        }
+        saveData()
+    });
+});
 
 
-removeBtn.forEach((x) => {
-    x.addEventListener('click', (x) => {
-        alert('helo')
-    })
-})
 
 
 
