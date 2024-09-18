@@ -421,7 +421,7 @@ function cart(name, pic) {
                     <div class="price total billing" id="bill">
                         11000
                     </div>
-                    <div>
+                    <div class='removeProduct'>
                         <img src="./Assets/close-circle.png" alt="" srcset="" class="cross">
                     </div>
 

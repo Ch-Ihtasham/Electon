@@ -61,6 +61,20 @@ subTotal.innerText = total
 let counterTwo = document.getElementById('counterTwo')
 counterTwo.innerText = localStorage.getItem('number')
 
+// remove product function 
+let removeBtn = document.querySelectorAll('removeProduct');
+// console.log(removeBtn)
+// removeBtn.addEventListener('click', () => {
+//     alert('suppose item is removed')
+// })
+const storedItems = localStorage.getItem('data');
+
+
+removeBtn.forEach((x) => {
+    x.addEventListener('click', (x) => {
+        alert('helo')
+    })
+})
 
 
 
